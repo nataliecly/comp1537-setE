@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            text-align: center;
+        }
+
+        nav {
+            background-color: black;
+
+        }
+
+        nav a {
+            color: wheat;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            width: 100px;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background: wheat;
+            color: black;
+        }
+
+        #lastlink {
+            float: right
+        }
+
+        section {
+            width: 70%;
+            float: left;
+        }
+
+        aside {
+            width: 30%;
+            float: right;
+            padding-left: 10px;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: #a2b9bc;
+            padding: 20px;
+            margin-top: 5px;
+        }
+
+        footer {
+            clear: both;
+            text-align: center;
+        }
+
+        main {
+            clear: both;
+        }
+
+
+        @media screen and (max-width: 400px) {
+            section {
+                width: 100%;
+                float: none;
+            }
+
+            aside {
+                width: 100%;
+                float: none;
+                padding-left: 0px;
+            }
+
+            #lastlink {
+                float: none;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> Header </h1>
+        <p> This should be responsive </p>
+    </header>
+    <nav>
+        <a href=""> Link 1 </a>
+        <a href=""> Link 2 </a>
+        <a href=""> Link 3 </a>
+        <a href="" id="lastlink"> Link 4 </a>
+    </nav>
+
+    <main>
+        <section>
+            <div class="card">
+                <h2> Title1 </h2>
+                <h5> Title Description </h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, incidunt natus iste facilis tempora
+                    quam possimus labore, dolor, optio minima itaque. Voluptatum accusantium earum, fugit quibusdam
+                    quisquam nam eius provident?
+                </p>
+            </div>
+            <div class="card">
+                <h2> Title2 </h2>
+                <h5> Title Description2 </h5>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis culpa, dolore, vitae recusandae ipsum
+                    unde
+                    numquam dolores, veritatis quasi illo doloribus voluptates rem iusto deleniti iste tenetur nemo nisi
+                    molestiae.
+                </p>
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"
+                    width="200px" height="130px">
+                <img src="https://cdn.britannica.com/56/94456-050-2ECDE7B8/Vancouver-British-Columbia-Canada.jpg"
+                    width="200px" height="130px">
+                <img src="https://media.cntraveller.com/photos/611bf21536358776d9492c1e/4:3/w_1704,h_1278,c_limit/Aerial-view-of-vancouver-british-columbia-canada-conde-nast-traveller-21feb17-tourism-canada.jpg"
+                    width="200px" height="130px">
+                <img src="https://media.timeout.com/images/105872167/750/562/image.jpg" width="200px" height="130px">
+                <img src="https://www.tripsavvy.com/thmb/ti3vAAOfU92tFEXxPu_yFWYZ2s8=/3072x2048/filters:fill(auto,1)/a-beautiful-view-of-west-vancouver-canada-173027790-5b0ca2e80e23d90036a7e1e3.jpg"
+                    width="200px" height="130px">
+            </div>
+        </section>
+
+        <aside>
+            <div class="card">
+                <h2> Title Aside </h2>
+                <h5> Title Description </h5>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, consequatur fugit blanditiis
+                    iure
+                    rem
+                    fugiat repudiandae quidem nostrum consectetur illum assumenda, distinctio molestiae doloremque
+                    repellat?
+                    Obcaecati aliquid cum magnam quisquam
+                </p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <h2>
+            Footer
+        </h2>
+    </footer>
+</body>
+
+</html>
