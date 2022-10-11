@@ -50,11 +50,12 @@ a {
 }
 
 #cat_box {
+    outline: 0.5px solid grey;
     float: right;
-    clear: none;
     background-color: whitesmoke;
     box-sizing: border-box;
     text-align: center;
+    display: inline;
     /* border-width: 100px; */
 }
 
