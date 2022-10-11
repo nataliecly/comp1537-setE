@@ -47,6 +47,7 @@ nav {
 
 a {
     color: blue;
+    text-decoration: none;
 }
 
 #cat_box {
@@ -58,6 +59,8 @@ a {
     display: inline;
     /* border-width: 100px; */
 }
+
+
 
 #cat_label {
     background-color: darkkhaki;
@@ -88,9 +91,10 @@ a {
 }
 
 
-section {
-    /* padding-left: 50px; */
-}
+/* section {
+    
+} */
+
 
 .see_also {
     padding-top: 10px;
