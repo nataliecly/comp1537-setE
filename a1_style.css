@@ -63,3 +63,15 @@ a {
     float: left;
     padding-right: 30px;
 }
+
+#see_also {
+    padding-top: 10px;
+    font-size: large;
+    clear: both;
+}
+
+#see_also_list {
+    font-size: smaller;
+    margin-top: 5px;
+    padding: 20px;
+}
