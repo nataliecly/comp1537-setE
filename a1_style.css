@@ -31,7 +31,9 @@ nav {
 .sidebar_list {
     background-color: whitesmoke;
     list-style: none;
-    padding: 10px;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 150px;
     float: left;
     width: 15%;
     box-sizing: border-box;
@@ -39,7 +41,7 @@ nav {
 }
 
 #list_item {
-    padding-top: 5px;
+    padding-top: 10px;
     font-size: small;
 }
 
