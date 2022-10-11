@@ -74,12 +74,13 @@ a {
 }
 
 .contents {
-    outline: 0.5px solid black;
+    outline: 0.5px solid grey;
     background-color: whitesmoke;
     box-sizing: border-box;
     float: left;
     padding-right: 30px;
 }
+
 
 section {
     /* padding-left: 50px; */
