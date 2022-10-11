@@ -33,7 +33,7 @@ nav {
     list-style: none;
     padding: 20px;
     padding-top: 50px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     float: left;
     width: 15%;
     box-sizing: border-box;
@@ -79,6 +79,11 @@ a {
     box-sizing: border-box;
     float: left;
     padding-right: 30px;
+}
+
+#contents_list {
+    font-size: smaller;
+
 }
 
 
