@@ -36,7 +36,6 @@ nav {
 
 #list_item {
     padding-top: 5px;
-    word-wrap: break-word;
     font-size: small;
 }
 
@@ -50,6 +49,18 @@ a {
     background-color: whitesmoke;
     box-sizing: border-box;
     text-align: center;
+    /* border-width: 100px; */
+}
+
+#cat_label {
+    background-color: darkkhaki;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cat_label2 {
+    font-style: italic;
 }
 
 .label {
@@ -64,7 +75,11 @@ a {
     padding-right: 30px;
 }
 
-#see_also {
+section {
+    padding-left: 50px;
+}
+
+.see_also {
     padding-top: 10px;
     font-size: large;
     clear: both;
@@ -74,4 +89,29 @@ a {
     font-size: smaller;
     margin-top: 5px;
     padding: 20px;
+}
+
+@media screen and (max-width: 400px) {
+    main {
+        width: 100%;
+        float: none;
+    }
+
+    .sidebar_list {
+        float: none;
+        width: 15%;
+    }
+
+    #cat_box {
+        float: none;
+    }
+
+    .contents {
+        float: none;
+    }
+
+    section {
+        float: none;
+        width: 100%;
+    }
 }
