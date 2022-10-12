@@ -4,6 +4,7 @@ header {
 
 #title {
     font-family: serif;
+    
 
 }
 
@@ -89,10 +90,6 @@ a {
     margin-right: 1em;
 }
 
-#contents_list {
-    font-size: smaller;
-
-}
 
 .see_also {
     padding-top: 10px;
