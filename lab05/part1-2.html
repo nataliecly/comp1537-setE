@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lab 5 Part I-II </title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav a {
+            color: #f2f2f2;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background: whitesmoke;
+            color: black;
+        }
+
+        #link4 {
+           float: right;
+        }
+
+        img {
+            width: 100%;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .img-container {
+            width: 30%;
+            float: left;
+            margin-left: calc(10% / 3);
+        }
+
+        #centered_div {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        footer {
+            clear: both;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            .img-card {
+                width: 100%;
+                float: none;
+                padding: 10px 10px;
+            }
+
+            #centered_div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Responsive Web Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="#"> Link 1 </a>
+        <a href="#"> Link 2 </a>
+        <a href="#"> Link 3 </a>
+        <a href="#" id="link4"> Link 4 </a>
+    </nav>  
+    
+    <main>
+        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, tempora, architecto quibusdam accusamus dicta excepturi ut fugiat consectetur voluptate cumque aliquam consequuntur modi atque sapiente? Placeat minima nemo totam molestias.</p>
+
+        <div id="img-row">
+            <div id="centered_div">
+                <div class="img-container">
+                    <img src="https://picsum.photos/200/300?random=1" alt="">
+                </div>
+                <div class="img-container">
+                    <img src="https://picsum.photos/200/300?random=2" alt="">
+                </div>
+                <div class="img-container">
+                    <img src="https://picsum.photos/200/300?random=3" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="img-row">
+            <div id="centered_div">
+                <div class="img-container">
+                    <img src="https://picsum.photos/200/300?random=4" alt="">
+                </div>
+                <div class="img-container">
+                    <img src="https://picsum.photos/200/300?random=5" alt="">
+                </div>
+                <div class="img-container">
+                    <img src="https://picsum.photos/200/300?random=6" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="img-row">
+            <div id="centered_div">
+                <div class="img-container">
+                    <img src="https://picsum.photos/200/300?random=7" alt="">
+                </div>
+                <div class="img-container">
+                    <img src="https://picsum.photos/200/300?random=8" alt="">
+                </div>
+                <div class="img-container">
+                    <img src="https://picsum.photos/200/300?random=9" alt="">
+                </div>
+            </div>
+
+    </main>
+
+    <footer>
+        <h5>
+            Copyright © Your Website 2022
+        </h5>
+    </footer>
+
+</body>
+</html>
