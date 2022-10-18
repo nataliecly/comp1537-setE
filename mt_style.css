@@ -1,0 +1,109 @@
+*,
+body {
+    box-sizing: border-box;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+header {
+    height: 50px;
+}
+
+nav {
+    float: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: grey;
+    font-size: 20px;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+nav a:hover {
+    color: black;
+}
+
+.left-container {
+    width: 49%;
+    float: left;
+    padding: 10px;
+    border: solid grey 1px;
+}
+
+.right-container {
+    width: 49%;
+    float: right;
+    padding: 10px;
+    border: solid grey 1px;
+}
+
+#centered_div {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#card-img {
+    float: left;
+    margin-right: 10px;
+}
+
+#card-text {
+    color: grey;
+}
+
+footer {
+    clear: both;
+    text-align: center;
+    color: grey;
+    padding: 20px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        width: 100%;
+        text-align: center;
+        }
+
+    nav a {
+        width: 100%
+    }
+    
+    #logo {
+        display: none;
+        }
+
+    .left-container {
+        width: 100%;
+    }
+    .right-container {
+        width: 100%;
+    }
+    
+    #centered_div {
+        width: 100%;
+        }
+
+    .card-row {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    .left-container {
+        width: 50%;
+    }
+
+    .right-container {
+        width: 50%;
+    }
+
+    #card-img {
+        padding: 0;
+        margin-top: 0;
+    }
+    
+}

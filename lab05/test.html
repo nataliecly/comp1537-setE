@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        function helper_function() {
+            // variable_username = $("#username").val()
+            // var_password = $("#password_box").val()
+            variable_number = $("#username").val()
+
+            if (variable_number % 4 != 0) {
+                $("#header").html("This is not a leap year")
+
+            }
+
+            else if (variable_number % 4 == 0) {
+                $("#header").html("This is a leap year")
+
+            }
+
+            // var_password = $("#password_box").val()
+
+
+
+            // converts to string like the print function
+            //    $("#header").html(variable_username + " " + var_password) 
+        }
+
+        function main_function() {
+            $("#click").click(helper_function)
+        }
+
+        // if name == main
+        $(document).ready(main_function)
+    </script>
+    
+</head>
+
+
+<body>
+
+    <h1 id="header"></h1>
+    <input type="text" name="" id="username">
+    <input type="password" name="" id="password_box">
+    <input type="button" value="click" id="click">
+    <!-- <input type="submit" value="Click Me" id="submit_button"> -->
+</body>
+</html>

@@ -60,13 +60,22 @@
         }
 
         @media screen and (max-width: 600px) {
-            .img-card {
+            .img-container {
                 width: 100%;
-                float: none;
-                padding: 10px 10px;
+            
             }
 
             #centered_div {
+                width: 100%;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .all-img {
+                display: block;
                 width: 100%;
             }
         }
@@ -88,44 +97,46 @@
     <main>
         <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, tempora, architecto quibusdam accusamus dicta excepturi ut fugiat consectetur voluptate cumque aliquam consequuntur modi atque sapiente? Placeat minima nemo totam molestias.</p>
 
-        <div id="img-row">
-            <div id="centered_div">
-                <div class="img-container">
-                    <img src="https://picsum.photos/200/300?random=1" alt="">
-                </div>
-                <div class="img-container">
-                    <img src="https://picsum.photos/200/300?random=2" alt="">
-                </div>
-                <div class="img-container">
-                    <img src="https://picsum.photos/200/300?random=3" alt="">
+        <div class="all-img">
+            <div id="img-row">
+                <div id="centered_div">
+                    <div class="img-container">
+                        <img src="https://picsum.photos/200/300?random=1" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="https://picsum.photos/200/300?random=2" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="https://picsum.photos/200/300?random=3" alt="">
+                    </div>
                 </div>
             </div>
+            <div id="img-row">
+                <div id="centered_div">
+                    <div class="img-container">
+                        <img src="https://picsum.photos/200/300?random=4" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="https://picsum.photos/200/300?random=5" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="https://picsum.photos/200/300?random=6" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="img-row">
+                <div id="centered_div">
+                    <div class="img-container">
+                        <img src="https://picsum.photos/200/300?random=7" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="https://picsum.photos/200/300?random=8" alt="">
+                    </div>
+                    <div class="img-container">
+                        <img src="https://picsum.photos/200/300?random=9" alt="">
+                    </div>
+                </div>
         </div>
-        <div id="img-row">
-            <div id="centered_div">
-                <div class="img-container">
-                    <img src="https://picsum.photos/200/300?random=4" alt="">
-                </div>
-                <div class="img-container">
-                    <img src="https://picsum.photos/200/300?random=5" alt="">
-                </div>
-                <div class="img-container">
-                    <img src="https://picsum.photos/200/300?random=6" alt="">
-                </div>
-            </div>
-        </div>
-        <div id="img-row">
-            <div id="centered_div">
-                <div class="img-container">
-                    <img src="https://picsum.photos/200/300?random=7" alt="">
-                </div>
-                <div class="img-container">
-                    <img src="https://picsum.photos/200/300?random=8" alt="">
-                </div>
-                <div class="img-container">
-                    <img src="https://picsum.photos/200/300?random=9" alt="">
-                </div>
-            </div>
 
     </main>
 
