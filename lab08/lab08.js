@@ -8,7 +8,7 @@
 setup = function () {
   $.ajax(
     {
-      url: "https://api.themoviedb.org/3/movie/top_rated?api_key=ed4ef9b0f9bcb9c237ab83a2c2ffb909&language=en-US&page=1",
+      url: "https://api.themoviedb.org/3/movie/top_rated?api_key=e876fb3647a646e4d2e48f9eb2e4f506&language=en-US&page=1",
       type: "GET",
       success: function (data) {
         // console.log(data.results[0]);
