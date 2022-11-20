@@ -18,26 +18,27 @@
 </head>
 
 <body>
+    <div id="pagination_div">
+        <label for="pageSizeMenu"> Page size</label>
+        <select name="" id="pageSizeMenu">
+            <option value="3"> 3 </option>
+            <option value="5"> 5 </option>
+            <option value="10"> 10 </option>
+            <option value="20"> 20 </option>
+        </select>
+        <br>
+        <label for="searchTerm"> Please enter a search term</label>
+        <input type="text" name="searchTerm" id="search-term">
+        <button id="search-btn">Search</button>
+        <br>
+        <br>
+        <button id="prev-btn">Prev</button>
+        page buttons to be added
+        <button id="next-btn">Next</button>
+    
+    </div>
     <main>
-        <div id="pagination_div">
-            <label for ="pageSizeMenu"> Page size</label>
-            <select name="" id="pageSizeMenu">
-                <option value="3"> 3 </option>
-                <option value="5"> 5 </option>
-                <option value="10"> 10 </option>
-                <option value="20"> 20 </option>
-            </select>
-            <br>
-            <label for="searchTerm"> Please enter a search term</label>
-            <input type="text" name="searchTerm">
-            <button id="search-btn">Search</button>
-            <br>
-            <br>
-            <button id="prev-btn">Prev</button>
-            page buttons to be added
-            <button id="next-btn">Next</button>
-            
-        </div>
+        
     </main>
     <aside></aside>
 </body>
