@@ -1,7 +1,7 @@
 
-
+// GLOBAL VARIABLES
 var currentPage = 1;
-var pageSize = 3;
+var pageSize = 3
 
 setup = function () {
   $("#search-btn").click(() => {
@@ -39,6 +39,10 @@ setup = function () {
   )
   })
   
+  $("#pageSizeMenu").change(() => {
+    pageSize = $("#pageSizeMenu option:selected").val();
+    console.log("pageSize", pageSize);
+  })
 
   $("body").on("click", ".backdropBtn", function () {
     // console.log(`https://image.tmdb.org/t/p/w500/${$(this).attr('movieBackdropImageName')}`);
