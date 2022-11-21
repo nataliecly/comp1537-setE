@@ -5,6 +5,8 @@ var pageSize;
 var term;
 
 display_page = () => {
+  $("main").empty();
+  $("#page-buttons").empty();
   $.ajax(
       {
         url: `https://api.themoviedb.org/3/search/movie?api_key=e876fb3647a646e4d2e48f9eb2e4f506&language=en-US&page=1&include_adult=false&query=${term}`,
@@ -12,9 +14,17 @@ display_page = () => {
         success: function (data) {
           console.log(data["results"]);
           let start_index = (currentPage - 1) * pageSize;
-          let end_index = pageSize * (currentPage - 1) + pageSize;
+          let end_index = Number(start_index) + Number(pageSize);
+          var buttons = 20 / pageSize;
+          console.log(buttons);
+          console.log(end_index);
+          for (i = 1; i < buttons + 1; i++) {
+            $("#page-buttons").append(
+              `<button> ${i} </button>`
+            )
+          }
 
-          $("main").empty();
+          // $("main").empty();
           for (i = start_index; i < end_index; i++) {
             $("main").append(
               `
@@ -44,13 +54,13 @@ setup = function () {
   pageSize = $("#pageSizeMenu option:selected").val();
   $("#search-btn").click(() => {
     term = $("#search-term").val();
-    console.log('the entered term:', term);
+    // console.log('the entered term:', term);
     display_page()
   })
   
   $("#pageSizeMenu").change(() => {
     pageSize = $("#pageSizeMenu option:selected").val();
-    console.log("pageSize", pageSize);
+    console.log("pageSize:", pageSize);
     display_page()
   })
 
@@ -62,6 +72,13 @@ setup = function () {
       `
     )
   })
+
+
+   $("#page-buttons").on("click", "button", function () {
+     currentPage = $(this).text();
+     display_page()
+    })
+  }
 
   // $("#next-btn").click(() => {
   //   currentPage += 1;
@@ -76,6 +93,6 @@ setup = function () {
   
   
 
-}
+
 
 $(document).ready(setup)
