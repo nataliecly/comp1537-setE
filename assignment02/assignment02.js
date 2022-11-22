@@ -16,11 +16,11 @@ display_page = () => {
           const end_index = Number(start_index) + Number(pageSize);
           // console.log(end_index);
           
-          let buttons = 20 / pageSize;
+          let pageButtons = 20 / pageSize;
 
-          // console.log(buttons);
+          // console.log(pageButtons);
     
-          for (i = 1; i < buttons + 1; i++) {
+          for (i = 1; i < pageButtons + 1; i++) {
             $("#page-numbers").append(
               `<button> ${i} </button>`
             )
@@ -55,18 +55,22 @@ display_page = () => {
 
 setup = function () {
   pageSize = $("#pageSizeMenu option:selected").val();
+
+  // display pages based on search term
   $("#search-btn").click(() => {
     term = $("#search-term").val();
     // console.log('the entered term:', term);
     display_page()
   })
-  
+
+  // display pages based on page size selected in dropdown menu 
   $("#pageSizeMenu").change(() => {
     pageSize = $("#pageSizeMenu option:selected").val();
     console.log("pageSize:", pageSize);
     display_page()
   })
 
+  // backdrop image
   $("body").on("click", ".backdropBtn", function () {
     // console.log(`https://image.tmdb.org/t/p/w500/${$(this).attr('movieBackdropImageName')}`);
     $("aside").html(
@@ -76,35 +80,55 @@ setup = function () {
     )
   })
 
+  // page number buttons
    $("#page-numbers").on("click", "button", function () {
      currentPage = Number($(this).text());
      display_page()
    })
   
-  $(".buttonDiv").on("click", function () {
+  // make page buttons + first/last/next/prev buttons display on click
+  
+  $("#search-btn").on("click", function () {
     // console.log("clicked");
     $("#first-btn").css("display", "inline-block");
     $("#last-btn").css("display", "inline-block")
-    // $("#prev-btn").css("display", "inline-block")
-    // $("#next-btn").css("display", "inline-block")
   })
 
     $("#page-numbers").on("click", function () {
     // console.log("clicked");
     $("#prev-btn").css("display", "inline-block")
     $("#next-btn").css("display", "inline-block")
+    })
+  
+  // first, last, next, prev buttons function
+
+
+  $("#next-btn").on("click", function () {
+    if (currentPage < 20 / pageSize) {
+      currentPage += 1;
+    }
+    display_page()
+  })
+
+  $("#prev-btn").on("click", function () {
+    if (currentPage > 1) {
+      currentPage -= 1;
+    }
+    display_page()
+  })
+
+  $("#first-btn").on("click", function () {
+    currentPage = 1;
+    display_page()
+    })
+  
+  $("#last-btn").click(() => {
+    currentPage = 20 / pageSize;
+    display_page()
   })
 }
 
 
-  $("#next-btn").on("click" , function () {
-    currentPage += 1;
-    display_page()
-  })
 
-  $("#prev-btn").on("click" , function () {
-    currentPage -= 1;
-    display_page()
-  })
 
 $(document).ready(setup)
