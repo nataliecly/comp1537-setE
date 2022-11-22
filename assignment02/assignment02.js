@@ -2,11 +2,10 @@
 // GLOBAL VARIABLES
 var currentPage = 1;
 var pageSize;
-var term;
 
 display_page = () => {
   $("main").empty();
-  $("#page-buttons").empty();
+  $("#page-numbers").empty();
   $.ajax(
       {
         url: `https://api.themoviedb.org/3/search/movie?api_key=e876fb3647a646e4d2e48f9eb2e4f506&language=en-US&page=1&include_adult=false&query=${term}`,
@@ -15,19 +14,19 @@ display_page = () => {
           console.log(data["results"]);
           const start_index = (Number(currentPage) - 1) * Number(pageSize);
           const end_index = Number(start_index) + Number(pageSize);
-
+          // console.log(end_index);
+          
           let buttons = 20 / pageSize;
 
-          console.log(buttons);
-          console.log(end_index);
-
+          // console.log(buttons);
+    
           for (i = 1; i < buttons + 1; i++) {
-            $("#page-buttons").append(
+            $("#page-numbers").append(
               `<button> ${i} </button>`
             )
           }
 
-          // $("main").empty();
+          
           for (i = start_index; i < end_index; i++) {
             $("main").append(
               `
@@ -77,20 +76,35 @@ setup = function () {
     )
   })
 
-   $("#page-buttons").on("click", "button", function () {
-     currentPage = $(this).text();
+   $("#page-numbers").on("click", "button", function () {
+     currentPage = Number($(this).text());
      display_page()
-    })
-  }
+   })
+  
+  $(".buttonDiv").on("click", function () {
+    // console.log("clicked");
+    $("#first-btn").css("display", "inline-block");
+    $("#last-btn").css("display", "inline-block")
+    // $("#prev-btn").css("display", "inline-block")
+    // $("#next-btn").css("display", "inline-block")
+  })
 
-  // $("#next-btn").click(() => {
-  //   currentPage += 1;
-  //   display_page()
-  // })
+    $("#page-numbers").on("click", function () {
+    // console.log("clicked");
+    $("#prev-btn").css("display", "inline-block")
+    $("#next-btn").css("display", "inline-block")
+  })
+}
 
-  // $("#prev-btn").click(() => {
-  //   currentPage -= 1;
-  //   display_page()
-  // })
+
+  $("#next-btn").on("click" , function () {
+    currentPage += 1;
+    display_page()
+  })
+
+  $("#prev-btn").on("click" , function () {
+    currentPage -= 1;
+    display_page()
+  })
 
 $(document).ready(setup)
