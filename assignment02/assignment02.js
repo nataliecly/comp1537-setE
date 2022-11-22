@@ -13,11 +13,14 @@ display_page = () => {
         type: "GET",
         success: function (data) {
           console.log(data["results"]);
-          let start_index = (currentPage - 1) * pageSize;
-          let end_index = Number(start_index) + Number(pageSize);
-          var buttons = 20 / pageSize;
+          const start_index = (Number(currentPage) - 1) * Number(pageSize);
+          const end_index = Number(start_index) + Number(pageSize);
+
+          let buttons = 20 / pageSize;
+
           console.log(buttons);
           console.log(end_index);
+
           for (i = 1; i < buttons + 1; i++) {
             $("#page-buttons").append(
               `<button> ${i} </button>`
@@ -73,7 +76,6 @@ setup = function () {
     )
   })
 
-
    $("#page-buttons").on("click", "button", function () {
      currentPage = $(this).text();
      display_page()
@@ -89,10 +91,5 @@ setup = function () {
   //   currentPage -= 1;
   //   display_page()
   // })
-
-  
-  
-
-
 
 $(document).ready(setup)
