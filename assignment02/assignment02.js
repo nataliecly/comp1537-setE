@@ -38,6 +38,7 @@ display_page = () => {
                 </p>
                 <img 
                   src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}"
+                  width= 100px;
                 >
                 <button movieBackdropImageName="${data.results[i].backdrop_path}" class="backdropBtn"> BackDrop Image </button>
                 <hr>
