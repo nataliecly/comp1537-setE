@@ -1,0 +1,90 @@
+QUESTION 1:
+db.unicorns.find({
+  "gender": "m",
+  "weight": {$gt: 700}
+})
+
+
+QUESTION 2:
+db.unicorns.find({
+  "vampires": {"$exists": false}
+})
+
+
+QUESTION 3:
+db.unicorns.find({
+  "loves": {$in: ["apple", "carrot"]}
+  })
+
+or can do it this way:
+db.unicorns.find({
+  $or: [
+    {"loves": {$in: ["apple"]}},
+    {"loves": {$in: ["carrot"]}}
+    ]
+})
+
+
+QUESTION 4:
+db.unicorns.find({
+  "gender": "f",
+  $or: [
+    {"loves": "apple"},
+    {"weight": {$lt: 500}}
+  ]
+})
+
+
+QUESTION 5:
+db.unicorns.update(
+    {"name": "Pilot"},
+    {$inc: {"vampires": -2}},
+    {multi: true}
+)
+
+
+QUESTION 6:
+db.unicorns.update(
+  {"name": "Aurora"},
+  {$push: {"loves": "sugar"}},
+  {mutli: true}
+)
+
+
+QUESTION 7:
+db.unicorns.update(
+  {},
+  {$set: {"vaccinated": true}},
+  {multi: true}
+)
+
+
+QUESTION 8:
+db.unicorns.find()
+.sort({"weight": -1})
+
+
+QUESTION 9: 
+db.unicorns.aggregate([
+  {
+    $sort: {
+      name: 1,
+      vampires: -1
+    }
+  }
+])
+
+
+QUESTION 10:
+db.unicorns.find()
+	.sort({weight: -1})
+	.limit(2)
+	.skip(1)
+
+
+QUESTION 11:
+db.collection.count(
+{"vampires": {$gt: 50}}
+)
+
+
