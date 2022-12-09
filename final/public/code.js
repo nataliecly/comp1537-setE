@@ -5,13 +5,13 @@ function setup() {
   $("#genderMenu").change(function () {
     // alert("Hello, " + $("#unicornNameFromHTML").val());
     $.ajax({
-      url: "http://localhost:4000/nameUnicorns",
+      url: "http://localhost:4000/genderUnicorns",
       type: "POST",
       data: { genderMenu: $("#genderMenu").val() },
       success: function (data) {
         console.log(data);
         receivedArr = data;
-        result = "";
+        // result = "";
         result = `</ul>`;
         data.map((aUnicorn) => {
           console.log("aUnicorn", aUnicorn);

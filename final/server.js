@@ -41,7 +41,7 @@ app.get("/unicorns", (req, res) => {
 app.use(express.urlencoded());
 app.use(express.json());
 
-app.post("/nameUnicorns", (req, res) => {
+app.post("/genderUnicorns", (req, res) => {
   console.log(req.body);
   unicornModel.find({ gender: req.body.genderMenu }, (err, data) => {
     if (err) res.send(err);
