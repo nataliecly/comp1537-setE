@@ -87,14 +87,14 @@ setup = function () {
    })
   
   // make page buttons + first/last/next/prev buttons display on click
-  
+
   $("#search-btn").on("click", function () {
     // console.log("clicked");
     $("#first-btn").css("display", "inline-block");
     $("#last-btn").css("display", "inline-block")
   })
 
-    $("#page-numbers").on("click", function () {
+  $("#page-numbers").on("click", function () {
     // console.log("clicked");
     $("#prev-btn").css("display", "inline-block")
     $("#next-btn").css("display", "inline-block")
