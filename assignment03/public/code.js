@@ -63,8 +63,27 @@ function setup() {
     });
   });
 
-  $("#filtersButton").change(function () {
-    if ($("#nameFilter").prop("checked")) {
+  $(".filtersButton").click(function () {
+    if (
+      $("#weightFilter").prop("checked") &&
+      $("#nameFilter").prop("checked")
+    ) {
+      newArr = receivedArr.map((item) => {
+        return [item.name, item.weight];
+      });
+      $("#result").html(JSON.stringify(newArr, undefined, 2));
+    } else if ($("#nameFilter").prop("checked")) {
+      newArr = receivedArr.map((item) => {
+        return item.name;
+      });
+      $("#result").html(JSON.stringify(newArr, undefined, 2));
+    } else if ($("#weightFilter").prop("checked")) {
+      newArr = receivedArr.map((item) => {
+        return item.weight;
+      });
+      $("#result").html(JSON.stringify(newArr, undefined, 2));
+    } else {
+      $("#result").html(JSON.stringify(receivedArr, undefined, 2));
     }
   });
 }
