@@ -1,0 +1,22 @@
+{
+  "name": "comp1537-sete",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nataliecly/comp1537-setE.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nataliecly/comp1537-setE/issues"
+  },
+  "homepage": "https://github.com/nataliecly/comp1537-setE#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
