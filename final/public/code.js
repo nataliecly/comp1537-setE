@@ -18,23 +18,26 @@ function setup() {
           for (var field in aUnicorn) {
             result += `<li>${field}: ${aUnicorn[field]}</li>`;
           }
-          result += `</li>`;
+          result += `</li>  <span><button class="showDetails">show details</button>
+        </span>
+        <br>`;
         });
-        result += "</ul>";
+        result += `<ul>`;
         $("#result").html(result);
       },
     });
   });
-
-  $("#showName").change(function () {
-    if (this.checked) {
-      // alert("checked");
-      newArr = receivedArr.map((item) => {
-        return item.name;
-      });
-      $("#result").html(JSON.stringify(newArr[0]));
-    }
-  });
 }
+
+//   $("#showName").change(function () {
+//     if (this.checked) {
+//       // alert("checked");
+//       newArr = receivedArr.map((item) => {
+//         return item.name;
+//       });
+//       $("#result").html(JSON.stringify(newArr[0]));
+//     }
+//   });
+// }
 
 $(document).ready(setup);
