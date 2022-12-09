@@ -11,30 +11,20 @@ function setup() {
       success: function (data) {
         console.log(data);
         receivedArr = data;
-        $("#result").html(JSON.stringify(data, undefined, 2));
+        result = "";
+        result = `</ul>`;
+        data.map((aUnicorn) => {
+          console.log("aUnicorn", aUnicorn);
+          for (var field in aUnicorn) {
+            result += `<li>${field}: ${aUnicorn[field]}</li>`;
+          }
+          result += `</li>`;
+        });
+        result += "</ul>";
+        $("#result").html(result);
       },
     });
   });
-
-  // $("#genderMenu").change(function () {
-  //   // alert("Hello, " + $("#genderMenu").val());
-  //   $.ajax({
-  //     url: "http://localhost:4000/nameUnicorns",
-  //     type: "POST",
-  //     data: { unicornNameFromHTTPBody: $("#unicornNameFromHTML").val() },
-  //     success: function (data) {
-  //       console.log(data);
-  //       receivedArr = data;
-  //       // let list = document.getElementById("myList");
-  //       // receivedArr.forEach((item) => {
-  //       //   let li = document.createElement("li");
-  //       //   li.innerText = item.name;
-  //       //   list.appendChild(li);
-  //       // })
-  //       $("#result").html(JSON.stringify(data, undefined, 2));
-  //     },
-  //   });
-  // });
 
   $("#showName").change(function () {
     if (this.checked) {
